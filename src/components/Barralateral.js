@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -9,12 +8,12 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import './Barralateral.css'
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
+import AddCardIcon from '@mui/icons-material/AddCard';
 
 const Barralateral = () => {
 
@@ -41,17 +40,7 @@ const Barralateral = () => {
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
-                {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>   
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))} */}
+            
 
                 <ListItem disablePadding>
                     <ListItemButton >
@@ -77,7 +66,15 @@ const Barralateral = () => {
                         <ListItemText primary={"Contactos"} />
                     </ListItemButton>
                 </ListItem>
-            </List>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <AddCardIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={"Suscripciones"} />
+                    </ListItemButton>
+                </ListItem>
+           
             <Divider />
             <List>
                 <ListItem disablePadding>
